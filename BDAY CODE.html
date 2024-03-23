@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BENTE KA NA</title>
+    <style type="text/css">
+        body /* BACKGROUND BODY */
+        {
+background-image: url('Background.jpeg');
+background-size: cover;
+background-position: center;
+margin: 0;
+padding: 0;
+height: 100vh;  
+        }
+        
+      .tablink{
+        background-color:rgb(252, 185, 196);
+        color: rgb(190, 60, 104);
+        float: left;
+        border:none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        
+        width:33.3%;
+      }
+h3{
+    color:palevioletred;
+    font-family:Arial, Helvetica, sans-serif
+}
+      
+      /*tab button */
+      .tab button:hover{
+        background-color:#ddd;
+      }/* Style tab content 100% for full page content */
+      .tabcontent{
+        color:white; 
+        display: none;
+        padding: 100px 20px;
+        height:100%;
+      }
+      #home {background-color:"";}
+      #Message {background-color:"";}
+      #All About You {background-color:"";}
+       h1{
+color: rgb(190, 60, 104);
+text-align: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+        } 
+    </style>
+</head>   
+<body>
+    <h1>Happy 20th Birthday Mahal! 🎂🎉</h1> 
+    <button class="tablink" onclick="openPage('Home',this,'pink')">Home</button>
+    <button class="tablink" onclick="openPage('Message',this,'pink')">Message</button>
+    <button class="tablink" onclick="openPage('ABY',this,'pink')">All about you</button>
+
+    <div id="Home" class="tabcontent">
+        <h3>Hello mahaaaal happy birthday click mo yung nasa baba na may cake ❤️ </h3>
+    </div>
+    <div id="Message" class="tabcontent">
+      <img src="p1.jpg" class="ganda">
+        <h3 id="lsm" style="text-align:center;">HAPPY 20TH BIRTHDAY MAHAL!! So I know you have been working hard over these past few months, and ayon sobrang pagod na pagod ka na so I thought na if we can’t spend much time together the least I can do is make a 
+          website for u, this may not be much pero since wala ako sa bahay right now this is the least 
+          I can do. Anyways this is your day and sana you are happy and everything is going right, I don’t really have much to say pero I wish you well 
+          and sana all of your hard efforts come to bear results mwa, your pogi jowa love you always.</h3>
+    </div>
+    <div id="ABY" class="tabcontent">
+        <h3>All About you</h3>
+    </div>
+    <script>
+        function openPage(pageName,elmnt,color) {
+          // Hide all elements with class="tabcontent"
+          var i, tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+    
+          // Remove the "active" class from all buttons
+          var btn = document.getElementsByClassName("tablink");
+          for (i = 0; i < btn.length; i++) {
+            btn[i].className = btn[i].className.replace(" active", "");
+          }
+    
+          // Show the current tab, and add an "active" class to the button that opened it
+          document.getElementById(pageName).style.display = "block";
+          elmnt.className += " active";
+    
+          // (Optional) Change the color based on the button clicked (if desired)
+          // document.body.style.backgroundColor = color;  // Uncomment if needed
+        }
+    
+        // Call the openPage function to initially display the "Home" content
+        document.getElementById('Home').style.display = "block";  // Initial display of Home div
+      </script>
+    <canvas id="confetti"></canvas>
+    <button id = "button" class="button-53" role="button">
+    <img src="catCake.gif" alt="catCake" class="mcatCake">
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="confetti.js"></script>
+
+</body>
+</html>
